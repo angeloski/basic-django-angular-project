@@ -1,0 +1,64 @@
+<div class="small-12 columns" ng-cloak>
+  <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+  <br>
+
+<div class="row">
+  <div class="small-6 columns medium-offset-3">
+    <div class="row">
+      <form ng-submit="save()" name="editAccountForm" novalidate>
+        <div class="row">        
+          <div class="small-4 columns">
+              <label class="right inline">Username:</label>
+          </div>
+          <div class="small-8 columns end">
+              <input type="text" ng-model="user_account_edit.username" required>
+          </div>
+        </div>
+        <div class="row">        
+          <div class="small-4 columns">
+              <label class="right inline">First name:</label>
+          </div>
+          <div class="small-8 columns end">
+              <input type="text" ng-model="user_account_edit.first_name">
+          </div>
+        </div>
+        <div class="row">        
+          <div class="small-4 columns">
+              <label class="right inline">Last name:</label>
+          </div>
+          <div class="small-8 columns end">
+              <input type="text" ng-model="user_account_edit.last_name">
+          </div>
+        </div>
+        <div class="row">        
+          <div class="small-4 columns">
+              <label class="right inline">Email:</label>
+          </div>
+          <div class="small-8 columns end">
+              <input type="email" ng-model="user_account_edit.email">
+          </div>
+        </div>
+        <div class="row">        
+          <div class="small-4 columns">
+              <label class="right inline">Phone number:</label>
+          </div>
+          <div class="small-8 columns end">
+              <input type="text" ng-model="user_account_edit.phone_number">
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-4 columns">
+              &nbsp;
+          </div>
+          <div class="small-2 columns end">
+              <a ng-click="save()" class="button tiny">Save</a>
+          </div>
+          <div class="small-2 columns end">
+              <a ng-click="cancel()" class="button tiny">Cancel</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div> 
+</div>
+</div>

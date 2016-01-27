@@ -1,0 +1,22 @@
+Django==1.8.1
+django-braces==1.8.0
+gunicorn==19.3.0
+psycopg2==2.6
+git+https://github.com/angeloski/python-magento.git@e0d1d3f7524aa8c871406877d65ca93a2d49e070
+#python-magento==0.3.3
+djangorestframework==3.1.3
+Pillow==2.8.1
+-e git+https://github.com/bmihelac/django-import-export.git#egg=django-import-export
+jsonfield==1.0.3
+django-celery==3.1.16
+flower==0.8.2
+
+#magento==1.0
+#oauthlib==0.7.2
+#python-magento==0.3.3
+#requests==2.7.0
+#requests-oauthlib==0.5.0
+#six==1.9.0
+#suds-jurko==0.6
+
+

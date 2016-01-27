@@ -1,0 +1,57 @@
+{% load i18n %}
+
+<div class="contain-to-grid fixed">
+  <nav class="top-bar" data-topbar role="navigation">
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <!--li class="has-dropdown">
+          <a href="#">{% trans 'Account' %}</a>
+          <ul class="dropdown">
+            <li><a href="{% url 'logout' %}">{% trans 'Sign out' %}</a></li>
+          </ul>
+        </li-->
+        <li class="divider"></li>
+        <li><a href="{% url 'account' %}"><i class="fa fa-user">&nbsp;</i>{% trans 'Account' %}</a></li>
+        <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out">&nbsp;</i>{% trans 'Sign out' %}</a></li>
+      </ul>
+
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="{% url 'dashboard' %}"><i class="fa fa-home">&nbsp;</i>{% trans 'Dashboard' %}</a></li>
+        <li class="divider"></li>
+        <ul class="title-area">
+          <li class="name" style="width:8rem;">
+          </li>
+        </ul>
+        <li class="has-dropdown">
+          <a href="#">{% trans 'Orders' %}</a>
+          <ul class="dropdown">
+            <li><a href="{% url 'logout' %}">{% trans 'Item 1' noop %}</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">{% trans 'Purchases' %}</a>
+          <ul class="dropdown">
+            <li><a href="{% url 'logout' %}">{% trans 'Item 1' noop %}</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">{% trans 'Relations' %}</a>
+          <ul class="dropdown">
+            <li><a href="{% url 'relations-list' %}">{% trans 'List' %}</a></li>
+            <li><a href="{% url 'relations-add' %}">{% trans 'Add' %}</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">{% trans 'Products' %}</a>
+          <ul class="dropdown">
+            <li><a href="{% url 'products-list' %}">{% trans 'List' %}</a></li>
+            <li><a href="{% url 'products-add' %}">{% trans 'Add' %}</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>

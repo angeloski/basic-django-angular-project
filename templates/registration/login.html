@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block super-content %}
+    <div class="row" style="margin-top: 5%;">
+        <div class="small-12 medium-8 large-6 columns small-centered">
+            <div class="signup-panel">
+                <p class="welcome">{% trans "Meubis Connect Login" %}</p>
+                <form class="login" method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="row collapse">
+                        {{ form.non_field_errors }}
+                        {{ form.username.errors }}
+                      <div class="small-2 columns">
+                        <span class="prefix"><i class="fa fa-user"></i></span>
+                      </div>
+                      <div class="small-10  columns">
+                        <input type="text" id="inputUsername" name="username" class="form-control" placeholder="{% trans 'Username' %}" required autofocus>
+                      </div>
+                    </div>
+                    <div class="row collapse">
+                        {{ form.password.errors }}
+                      <div class="small-2 columns ">
+                        <span class="prefix"><i class="fa fa-lock"></i></span>
+                      </div>
+                      <div class="small-10 columns ">
+                        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="{% trans 'Password' %}" required>
+                      </div>
+                    </div>
+                    <div class="small-3 block-center">
+                      <input type="hidden" value="/" name="next">
+                      <button class="button radius block-center" type="submit">{% trans "Login" %}</button>
+                    </div>
+                </form>
+                <div class="medium-7 small-9 block-center">
+                    <p>{% trans "Forgot your password?" %} <a href="{% url 'password_reset' %}">{% trans "Reset it here" %} &raquo</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock super-content %}
